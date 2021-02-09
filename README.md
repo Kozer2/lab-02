@@ -1,6 +1,5 @@
 # lab-02
 
-
 User Acceptance Tests
 Overview
 In labs 2 and 3, you and your partner(s) will be using the provided JSON files to create a photo gallery. You will style it using floats.
@@ -13,15 +12,15 @@ index.html
 Time Estimate
 For each of the features listed below, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
 
-Number and name of feature: ____3 features_1. Display Images, 2. Filter Images, 3. Style the app._
+Number and name of feature: \__\_\_3 features_1. Display Images, 2. Filter Images, 3. Style the app._
 
 Estimate of time needed to complete: 2 hours per feature
 
-Start time: __1349 20210209___
+Start time: **1349 20210209\_**
 
-Finish time: _____
+Finish time: **\_**
 
-Actual time needed to complete: _____
+Actual time needed to complete: **\_**
 Add this information to your README.
 
 Feature #1: Display images
@@ -42,7 +41,6 @@ Given that a user clicks on the dropdown menu When the user selects one of the o
 How are we implementing it?
 Create a <select> element which contains unique <option> elements extracted dynamically from the JSON file, one for each keyword.
 Use an event handler to respond when the user chooses an option from the select menu. Hide all of the images, then show those whose keyword matches the option chosen.
-  
 
 Feature #3: Style the application
 Why are we implementing this feature?
