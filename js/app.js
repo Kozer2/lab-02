@@ -14,7 +14,7 @@ Hornys.prototype.render=function(){
     const htmlTemplate = $('#photo-template').html();
     const hornObject = this;
     const renderedHornObject = Mustache.render(htmlTemplate, hornObject);
-    $('main').append(renderedHornObject);
+    $('section').append(renderedHornObject);
 }
 
 //     const $hornyClone = $('.photo-template').clone();
@@ -33,7 +33,7 @@ Hornys.prototype.render=function(){
 // }
 
 const horns = [];
-const toHorns = [];
+const horns2 = [];
 
 // using ajax I need to call the information in the json file
 $.ajax('data/page-1.json').then(callStuffBack => {
@@ -42,10 +42,12 @@ $.ajax('data/page-1.json').then(callStuffBack => {
     callStuffBack.forEach( (hornsHad) => {
         horns.push(new Hornys(hornsHad.image_url,hornsHad.title,hornsHad.description,hornsHad.keyword,hornsHad.horns));
         $('select').append(`<option value="${hornsHad.keyword}">${hornsHad.keyword}</option>`);
+
+
+        // $('select').append(`<option value="${hornsHad.horns}">${hornsHad.horns}</option>`);
         console.log('json hornsHads:',hornsHad);
     });
 
-    
     $('select').change( function () {
         const choice = $('select').find(':selected').text();
         console.log(choice);
@@ -59,7 +61,7 @@ $.ajax('data/page-2.json').then(callStuffBack => {
     console.log(callStuffBack);
     
     callStuffBack.forEach( (hornsHad) => {
-        horns.push(new Hornys(hornsHad.image_url,hornsHad.title,hornsHad.description,hornsHad.keyword,hornsHad.horns));
+        horns2.push(new Hornys(hornsHad.image_url,hornsHad.title,hornsHad.description,hornsHad.keyword,hornsHad.horns));
         $('select').append(`<option value="${hornsHad.keyword}">${hornsHad.keyword}</option>`);
         console.log('json hornsHads:',hornsHad);
     });
@@ -71,8 +73,20 @@ $.ajax('data/page-2.json').then(callStuffBack => {
         $('div').hide();
         $(`.${choice}`).show();
     });
-    horns.forEach(hornsHad => { hornsHad.render();});
+    
 })
+
+function renderSecond(page){
+    if (page === 1){
+        $('section').empty();
+        horns.forEach(horner => {horner.render();});
+    }
+    if (page === 2){
+        $('section').empty();
+        horns2.forEach(horner => {horner.render();});
+    }
+
+}
 
 
 
