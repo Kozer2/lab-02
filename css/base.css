@@ -1,20 +1,44 @@
 img {
-  width: 250px;
-  height: 250px;
-}
 
-li {
-  float: left;
-}
-
-li:first-child {
+    width: 250px;
+    height: 250px;
+  }
+  body {
+    font-family: "Sofia", sans-serif;
+    font-size: 20px;
+    background-color: black;
+    
+  }
+  header{
+    margin: 15px;
+    color: white;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li:first-child {
   display: none;
+  
+  }
+
+  main{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    /* margin: 100px; */
+  }
+
+div{
+  width: 400px;
+  height: 400px;
 }
-main {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: start;
+p{
+  margin: 0 auto;
 }
-div {
-  width: 300px;
+
+footer{
+  color: white;
 }
+

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
     <title>The Gallery of Horns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
@@ -19,9 +20,9 @@
     <main>
       <template id="photo-template" type="text/x-tmpl-mustache" class="{{keyword}}">
         <div class="{{keyword}}">
-        <h2>{{title}}, Horns:{{horns}}</h2>
+        <h2 class="font-effect-fire">{{title}}, Horns:{{horns}}</h2>
         <img src="{{image_url}}" alt="{{keyword}}">
-        <p>{{description}}</p>
+        <p class="font-effect-fire">{{description}}</p>
         <div>
       </template>
     </main>
