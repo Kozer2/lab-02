@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+
 img {
 
     width: 250px;
@@ -36,6 +38,7 @@ div{
 }
 p{
   margin: 0 auto;
+  
 }
 
 footer{

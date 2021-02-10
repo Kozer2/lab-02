@@ -16,13 +16,16 @@
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
+      <select>
+        <option value="default">Filter by Horn Amount</option>
+      </select>
     </header>
     <main>
       <template id="photo-template" type="text/x-tmpl-mustache" class="{{keyword}}">
         <div class="{{keyword}}">
-        <h2 class="font-effect-fire">{{title}}, Horns:{{horns}}</h2>
+        <h2 class="font-effect-fire-animation">{{title}}, Horns:{{horns}}</h2>
         <img src="{{image_url}}" alt="{{keyword}}">
-        <p class="font-effect-fire">{{description}}</p>
+        <p class="font-effect-fire-animation">{{description}}</p>
         <div>
       </template>
     </main>
