@@ -1,3 +1,5 @@
+@import "https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation";
+
 img {
 
     width: 250px;
@@ -23,19 +25,21 @@ img {
   
   }
 
-  main{
+  section{
     display: flex;
     flex-flow: wrap;
     justify-content: space-evenly;
     /* margin: 100px; */
   }
 
-div{
+section div{
   width: 400px;
   height: 400px;
 }
+
 p{
   margin: 0 auto;
+  
 }
 
 footer{

@@ -13,6 +13,10 @@
   <body>
     <header>
       <h1>The Gallery of Horns</h1>
+      <article id="buttons">
+        <button type="button" onclick="renderSecond(1)">Page 1</button>
+        <button type="button" onclick="renderSecond(2)">Page 2</button>
+      </article>
       <select>
         <option value="default">Filter by Keyword</option>
       </select>
@@ -20,11 +24,14 @@
     <main>
       <template id="photo-template" type="text/x-tmpl-mustache" class="{{keyword}}">
         <div class="{{keyword}}">
-        <h2 class="font-effect-fire">{{title}}, Horns:{{horns}}</h2>
+        <h2 class="font-effect-fire-animation">{{title}}, Horns:{{horns}}</h2>
         <img src="{{image_url}}" alt="{{keyword}}">
-        <p class="font-effect-fire">{{description}}</p>
+        <p class="font-effect-fire-animation">{{description}}</p>
         <div>
       </template>
+      <section>
+
+      </section>
     </main>
     <footer>
       &copy; 2021 DeltaV Lab 02
