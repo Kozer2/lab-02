@@ -38,10 +38,10 @@ Hornys.prototype.render=function(){
 $.ajax('data/page-1.json').then(callStuffBack => {
     console.log(callStuffBack);
     const horns = [];
-    callStuffBack.forEach( (horner) => {
-        horns.push(new Hornys(horner.image_url,horner.title,horner.description,horner.keyword,horner.horns));
-        $('select').append(`<option value="${horner.keyword}">${horner.keyword}</option>`);
-        console.log('json horners:',horner);
+    callStuffBack.forEach( (hornsHad) => {
+        horns.push(new Hornys(hornsHad.image_url,hornsHad.title,hornsHad.description,hornsHad.keyword,hornsHad.horns));
+        $('select').append(`<option value="${hornsHad.keyword}">${hornsHad.keyword}</option>`);
+        console.log('json hornsHads:',hornsHad);
     });
 
     
@@ -51,7 +51,7 @@ $.ajax('data/page-1.json').then(callStuffBack => {
         $('div').hide();
         $(`.${choice}`).show();
     });
-    horns.forEach(horner => { horner.render();});
+    horns.forEach(hornsHad => { hornsHad.render();});
 })
 
 
