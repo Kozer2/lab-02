@@ -99,3 +99,36 @@ function renderSecond(page){
 // const chameleon = new Hornys("https://imgc.allpostersimages.com/img/print/posters/dlillc-jackson-s-chameleon_a-G-13448768-14258384.jpg", "Serious Jackson's Chameleon", "This one is very serious.", "chameleon", 3);
 
 // chameleon.render();
+
+
+
+
+
+// const animalsArray = [];
+
+// function Animal(animalObj){
+//     this.image_url = animalObj.image_url;
+//     this.title = animalObj.title;
+//     this.description = animalObj.description;
+//     this.keyword = animalObj.keyword;
+//     this.horns = animalObj.horns;
+//     console.log('Constructor working');
+// }
+
+// Animal.prototype.render = function(){
+//     const html = $('#photo-template').html();
+//     console.log(html)
+//     const newHtml = Mustache.render(html, this);
+//     $('ul').append(newHtml);
+// };
+
+
+// function gfetDataFromPage(page){
+//     $.ajax(`data/${page}.json`).then(animalData => {
+//         animalData.forEach(animal =>{
+//             const newAnimal = new Animal(animal);
+//             animalsArray.push(newAnimal);
+//         });
+//     });
+
+// }
